@@ -169,7 +169,7 @@ tab-group {
 
 
 
-
+/* -----audio tab----- */
 
 /* ---------- Show media tab button when tab hover ---------- */
 .tab-icon-overlay {
@@ -196,9 +196,6 @@ tab-group {
 /* -------------------- */
 
 
-
-
-
 /* ---------- Dancing tab icon ---------- */
 @keyframes swing {
   0% {
@@ -217,11 +214,6 @@ tab-group {
   transform-origin: 50% 90%;
 }
 /* -------------------- */
-
-
-
-
-
 
 
 /* ---------- Note indicator audio tab ---------- */
@@ -294,9 +286,7 @@ tab-group {
 /* -----shy toolbar----- */
 
 
-/*------------------------------------
- * toolbar on side
- */
+/* toolbar on side */
 
 .titlebar-buttonbox-container{overflow: hidden !important;}
 #zen-tabbox-wrapper{z-index: 1 !important;}
@@ -482,7 +472,7 @@ tab-group {
 
 
 
-
+/* zen web panal transparency*/
 
 /* === Transparent Borderless Sidebars === */
 #sidebar-box,

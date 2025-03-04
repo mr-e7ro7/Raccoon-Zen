@@ -9,13 +9,18 @@ mini zen logo + removing back and forward buttons
 
 <img width="310" alt="Screenshot 2025-03-04 at 21 38 33" src="https://github.com/user-attachments/assets/0ac82815-d203-43b8-999f-310890b641ae" />
 
+
+
 shy toolbar
 
 <img width="152" alt="Screenshot 2025-03-04 at 21 44 57" src="https://github.com/user-attachments/assets/38173bdf-85fd-4bbf-8b87-c0c9d1dbb7a0" />
 
+
+
 dancing audio tab icon(its animated)
 
 <img width="58" alt="Screenshot 2025-03-04 at 21 39 13" src="https://github.com/user-attachments/assets/04210677-a36d-4232-87cf-1b2c031dc7f3" />
+
 
 
 and cool animations.

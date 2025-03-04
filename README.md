@@ -26,4 +26,4 @@ dancing audio tab icon(its animated)
 and cool animations.
 
 
-to get the old natsumi urlbar animation(assuming natsumi is already installed), go to natsumi>modules>natsumi-urlbar.css and replace the part under the title /*animations*/ (NOT the whole css) with the old animation css
+to get the old natsumi urlbar animation(assuming natsumi is already installed), go to natsumi>modules>natsumi-urlbar.css and replace the part under the title */*animations*/* (NOT the whole css) with the old animation css

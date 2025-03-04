@@ -791,7 +791,7 @@ slot:nth-child(1){
 
 
 
-
+/* Based on code by https://github.com/Tanay-Kar */
 browser {
   /* Needed for blur */
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);

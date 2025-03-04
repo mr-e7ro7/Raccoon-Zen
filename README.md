@@ -5,7 +5,7 @@ the current css comes form greeeen-dev(natsumi browser), TheBigWazz(pineapple fr
 
 
 
-mini zen logo + removing back and forward buttons
+mini zen logo (turns 3 dot menue button into zen logo)+ removing back and forward buttons
 
 <img width="310" alt="Screenshot 2025-03-04 at 21 38 33" src="https://github.com/user-attachments/assets/0ac82815-d203-43b8-999f-310890b641ae" />
 

@@ -1,0 +1,106 @@
+/* ==== Natsumi URLbar ==== */
+
+/* Animations */
+
+@keyframes urlbar-appear {
+  0% {
+    margin-top: calc(var(--zen-toolbar-height) * -2);
+  }
+  75% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes urlbar-appear-sideways {
+  0% {
+    margin-left: -28vw;
+  }
+  75% {
+    margin-left: 20px;
+  }
+  100% {
+    margin-left: calc(-1 * var(--urlbar-margin-inline));
+  }
+}
+
+/*noinspection CssInvalidFunction*/
+@keyframes results-appear {
+  0% {
+    opacity: 0;
+    margin-top: -90vh;
+  }
+  50% {
+    opacity: 0;
+    margin-top: -90vh;
+  }
+  75% {
+    opacity: 0;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*noinspection CssInvalidFunction*/
+@keyframes individual-result-appear {
+  0%   {
+    opacity: 0;
+    scale: 0.5;
+    background: var(--natsumi-colors-tertiary);
+    filter: blur(20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+    scale: var(--expand-width);
+    background: light-dark(var(--natsumi-primary-color), var(--natsumi-colors-primary));
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+    background: transparent;
+  }
+}
+
+/*noinspection CssInvalidFunction*/
+@keyframes individual-result-appear-subtle {
+  0%   {
+    opacity: 1;
+    scale: 1;
+    background: transparent;
+  }
+  60% {
+    scale: 1.05;
+    background: light-dark(var(--natsumi-primary-color), var(--natsumi-colors-primary));
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+    background: transparent;
+  }
+}
+
+@keyframes pinned-icon-appear {
+  0% {
+    opacity: 0;
+    scale: 0.5
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+    scale: 1.1;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}

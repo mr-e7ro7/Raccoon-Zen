@@ -35,3 +35,7 @@ also i think this is just clean af
 
 <img width="1306" alt="Screenshot 2025-03-11 at 19 47 56" src="https://github.com/user-attachments/assets/92ec7392-9683-44ba-bd4f-65e8baad16d1" />
 
+
+set zen.widget.macos.window-material to 1 in about config to get this kind of transparency
+
+you can also change the primary color in natsumi-congig, natsumi-library, and natsumi-pip to whatever you want. i use #4F93FF

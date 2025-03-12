@@ -38,4 +38,4 @@ also i think this is just clean af
 
 set zen.widget.macos.window-material to 1 in about config to get this kind of transparency
 
-you can also change the primary color in natsumi-congig, natsumi-library, and natsumi-pip to whatever you want. i use #4F93FF
+you can also change the primary color in natsumi-config.css, natsumi-library.css, and natsumi-pip.css to whatever you want. i use #4F93FF

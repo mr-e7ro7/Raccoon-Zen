@@ -1,5 +1,5 @@
 # my-stolen-zen-css
-a compilation of the zen css i have collected.
+a compilation of the zen css i have perminantly borrowed.
 these are not css that i made. just ones i found and use.
 the current css comes form greeeen-dev(natsumi browser), TheBigWazz(pineapple fried), sameerasw(my-internet), tanay-kar(lacuna), aaaaannd idk who all gave me the rest, but they have my deepest gratitude
 
@@ -39,3 +39,7 @@ also i think this is just clean af
 set zen.widget.macos.window-material to 1 in about config to get this kind of transparency
 
 you can also change the primary color in natsumi-config.css, natsumi-library.css, and natsumi-pip.css to whatever you want. i use #4F93FF
+
+
+the youtubemusic.css is to be used with the "zen internet" extension by sameerasw. turn of "hide element" in the extension when using that css. this will let you get proper transparency on youtube music, while keeping this in your player. when using the extension alone you wont have this when "hide element" is on, but transparency isn't proper when "hide element" is of
+<img width="517" alt="Screenshot 2025-03-16 at 00 12 53" src="https://github.com/user-attachments/assets/5a166412-44de-474b-9a51-6df05f877223" />

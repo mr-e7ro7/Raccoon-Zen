@@ -885,3 +885,331 @@ slot:nth-child(1){
     }
   }
 */
+
+
+
+
+
+
+
+
+
+
+/* essentials theme */
+
+.tab-reset-pin-button { 
+  /* makes pinned tab reset (back to pinned url) button have adjusted roundness */
+  border-top-left-radius: 12px !important;
+  border-bottom-left-radius: 12px !important;
+}
+
+/* Animations for essentials and stuff */
+#zen-main-app-wrapper:not(:has(#zen-welcome)) {
+  .tabbrowser-tab {
+    scale: unset !important;
+
+    &[zen-glance-tab] {
+      box-shadow: none !important;
+
+      .tab-label-container {
+        display: none !important;
+      }
+    }
+
+    .tab-stack {
+      transition: transform 0.2s ease !important;
+    }
+
+    .tab-background, .tab-icon-stack, .tab-label-container {
+      transition: opacity 0.2s ease !important;
+    }
+
+    .tab-background {
+      transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease !important;
+      overflow: hidden !important;
+      position: relative !important;
+
+      &::before {
+        transition: opacity 0.3s ease, width 0.3s ease, background 0.3s ease;
+        opacity: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: var(--tab-min-height);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;    
+      }
+    }
+
+    &[selected]:not([zen-glance-tab="true"]), &[visuallyselected]:not([zen-glance-tab="true"]) {
+      & > .tab-stack > .tab-background {
+ 
+        &::after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+
+    &:active {
+      .tab-stack {
+        transform: scale(0.95, 0.95) !important;
+      }
+    }
+  }
+}
+
+/* -------------------------------- Containers ------------------------------------------- */
+.tab-context-line {
+  display: none !important;
+}
+/* Ensure container tabs have a relative position */
+.tabbrowser-tab[usercontextid] .tab-background {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: inherit !important;
+  background-color: color-mix(in srgb, var(--identity-tab-color, #ff8a00) 8%, transparent) !important; /* 0.12 opacity */
+  transition: background-color 0.3s ease-out !important; /* Smooth transition */
+  filter: blur(0.5px);
+}
+
+/* When hovered or selected: Restore full background opacity */
+.tabbrowser-tab[usercontextid]:hover .tab-background,
+.tabbrowser-tab[usercontextid][visuallyselected] .tab-background {
+  background-color: var(--identity-tab-color, #ff8a00) !important;
+}
+
+/* Define the gradient animation */
+@keyframes container-gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 200% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Gradient layer (Hidden initially) */
+.tabbrowser-tab[usercontextid] .tab-background::after {
+  content: "";
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+
+  /* Dynamic gradient (Appears only on hover) */
+  background: linear-gradient(45deg, 
+    var(--identity-tab-color, #ff8a00) 15%, 
+    #e52e71 35%, 
+    #7f00ff 55%, 
+    #00c9ff 75%, 
+    var(--identity-tab-color, #ff8a00) 100%
+  ) !important;
+  
+  background-size: 300% 300% !important;
+  background-position: 0% 50%;
+  
+  opacity: 0 !important; /* Fully hidden by default */
+  filter: blur(15px) !important;
+  transition: opacity 0.3s ease-out, filter 0.3s ease-out, background-position 4s linear !important;
+  z-index: -1 !important;
+  border-radius: inherit !important;
+}
+
+/* When hovered: Gradient appears and animates */
+.tabbrowser-tab[usercontextid]:hover .tab-background::after {
+  opacity: 0.8 !important; /* Bright and vibrant */
+  filter: blur(15px) !important; /* Softer glow */
+  
+  /* Move the background for a flowing effect */
+  background-position: 200% 50% !important;
+}
+
+/* ------------------- Close button gradient animation -------------------- */
+
+/* Define gradient animation */
+@keyframes tab-gradient-loop {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 200% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Gradient overlay */
+.tabbrowser-tab .tab-background::before {
+  content: "";
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+
+  /* Brighter red-maroon-dark animated gradient */
+  background: linear-gradient(45deg, 
+    rgba(200, 20, 20, 1) 15%,  /* Bright red */
+    rgba(150, 10, 10, 0.9) 35%, /* Deep maroon */
+    rgba(90, 0, 0, 0.8) 55%, /* Dark red */
+    rgba(200, 20, 20, 1) 100% /* Bright red again */
+  ) !important;
+
+  background-size: 400% 400% !important;
+  background-position: 0% 50%;
+  
+  opacity: 0 !important; /* Initially hidden */
+  filter: blur(10px) brightness(1) !important; /* Slight glow effect */
+  transition: opacity 0.3s ease-out, filter 0.3s ease-out, background-position 4s linear !important;
+  z-index: -1 !important;
+  border-radius: inherit !important;
+}
+
+/* When hovering over close/reset button: show gradient and animate */
+.tabbrowser-tab:has(.tab-close-button:hover, .tab-reset-button:hover) .tab-background::before {
+  opacity: 1 !important; /* Fully visible */
+  filter: blur(8px) brightness(1.4) !important; /* Even brighter glow */
+  
+  /* Animate the gradient */
+  background-position: 200% 50% !important;
+}
+
+/* On hover over close/reset button: hide default gradient, show red gradient */
+.tabbrowser-tab:has(.tab-close-button:hover, .tab-reset-button:hover) .tab-background::after {
+  opacity: 0 !important;
+  transition: 1s ease-out;
+}
+
+/* ------------------------- Tabs Styling -------------------------- */
+.tabbrowser-tab[pinned]:not([zen-essentials="true"]) {
+    .tab-background {
+      background-color: light-dark(rgba(255,255,255,0.25), rgba(0,0,0,0.18)) !important;
+      box-shadow: 0 0px 8px rgba(0, 0, 0, 0) !important;
+      border-radius: 12px !important;
+      position: relative !important;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+    }
+  
+    &:hover .tab-background {
+      background-color: light-dark(rgba(255,255,255,0.45), rgba(0,0,0,0.45)) !important;
+      box-shadow: 0 0px 3px rgba(0, 0, 0, 0.55) !important;
+    }
+    &[selected="true"] .tab-background,
+    &[visuallyselected="true"] .tab-background {
+      background-color: light-dark(rgba(255, 255, 255, 0.55), rgba(0, 0, 0, 0.55)) !important;
+      box-shadow: 0 0px 3px rgba(0, 0, 0, 0.55) !important;
+    }
+  }
+.tabbrowser-tab:not([pinned]) {
+  .tab-background {
+      box-shadow: 0 0px 8px rgba(0, 0, 0, 0) !important;
+      border-radius: 12px !important;
+      position: relative !important;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+    }
+  
+    &:hover .tab-background {
+      background-color: light-dark(rgba(255,255,255,0.4), rgba(0,0,0,0.4)) !important;
+      box-shadow: 0 0px 3px rgba(0, 0, 0, 0.55) !important;
+    }
+    &[selected="true"] .tab-background,
+    &[visuallyselected="true"] .tab-background {
+      background-color: light-dark(rgba(255, 255, 255, 0.55), rgba(0, 0, 0, 0.35)) !important;
+      box-shadow: 0 0px 3px rgba(0, 0, 0, 0.55) !important;
+    }
+  }
+
+  /* ----------------------- Natsumi Workspace buttons ------------------------- */
+  /*
+  #zen-workspaces-button {
+  border-radius: 8px !important;
+  background-color: rgba(255,255,255,0.05) !important;
+  box-shadow: 0 0 12px rgba(0,0,0,0.22) !important;
+  padding: 3px !important;
+  
+  .subviewbutton {
+    border-radius: 6px !important;
+    transition: background-color 0.2s ease !important;
+    font-size: 16px !important;
+    filter: grayscale(0%) !important;
+    --toolbarbutton-hover-background: color-mix(in srgb, var(--zen-branding-bg-reverse) 10%, transparent 90%) !important;
+  
+    &:hover {
+      background-color: var(--toolbarbutton-hover-background) !important;
+    }
+  
+    &:active {
+      background-color: var(--toolbarbutton-active-background) !important;
+    }
+  
+    /*noinspection CssInvalidFunction*/
+    &[active] {
+      background-color: light-dark(rgba(255,255,255,1), rgba(255,255,255,0.2)) !important;
+      box-shadow: 0 0 4px rgba(0,0,0,0.32) !important;
+      overflow: hidden !important;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin-top: 50%;
+        background: linear-gradient(0, rgba(0, 0, 0, 0.2), transparent);
+      }
+    }
+  }
+ }*/
+/* ==== ESSENTIALS & STUFF === */
+
+#zen-main-app-wrapper:not(:has(#zen-welcome)) {
+  /* Tab click animations */
+  #tabbrowser-tabs:not([movingtab]) {
+    .tabbrowser-tab {
+      transition: scale 0.2s ease !important;
+    }
+
+    .tabbrowser-tab:active {
+      scale: 0.96 !important;
+    }
+
+    .tabbrowser-tab:has(.tab-close-button:hover) {
+      scale: 1 !important;
+    }
+  }
+
+
+    /* Split view tabs */
+    tab-group[split-view-group] {
+      .tabbrowser-tab {
+        & > .tab-stack > .tab-background {
+          &::after {
+            mask-image: linear-gradient(to right, black, transparent 60%);
+          }
+        }
+      }
+    }
+  }
+
+  #zen-essentials-container {
+    overflow: visible !important;
+
+    /*noinspection CssInvalidFunction*/
+    .tabbrowser-tab {
+      overflow: visible !important;
+
+      &[selected], &[visuallyselected] {
+        .tab-icon-image {
+          filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+        }
+
+        & > .tab-stack > .tab-background {
+          border: none !important;
+
+          &::before {
+            opacity: 0 !important;
+          }
+
+          &::after {
+            filter: saturate(180%) blur(15px) !important;
+          }
+        }
+      }
+    }
+  }

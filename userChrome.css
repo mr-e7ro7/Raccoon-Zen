@@ -472,10 +472,11 @@ tab-group {
 
 
 
-/* zen web panal transparency*/
+/* zen web panel transparency*/
 
 /* === Transparent Borderless Sidebars === */
-#sidebar-box,
+/* ff sidebar */
+/*#sidebar-box,
 #zen-sidebar-web-panel,
 #sidebar-splitter,
 #zen-sidebar-web-header,
@@ -488,8 +489,8 @@ tab-group {
   border-top: none !important;
   border-bottom: none !important;
 }
-
-/* === Floating Zen Sidebar Style === */
+*/
+/* === Floating Zen Sidepanel Style === */
 #zen-sidebar-web-panel {
   box-shadow: none !important;
 }

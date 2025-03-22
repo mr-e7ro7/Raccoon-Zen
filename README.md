@@ -42,4 +42,5 @@ you can also change the primary color in natsumi-config.css, natsumi-library.css
 
 
 the youtubemusic.css is to be used with the "zen internet" extension by sameerasw. turn of "hide element" in the extension when using that css. this will let you get proper transparency on youtube music, while keeping this in your player. when using the extension alone you wont have this when "hide element" is on, but transparency isn't proper when "hide element" is of
+
 <img width="517" alt="Screenshot 2025-03-16 at 00 12 53" src="https://github.com/user-attachments/assets/5a166412-44de-474b-9a51-6df05f877223" />

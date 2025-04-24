@@ -204,66 +204,76 @@ tabpanels .browserStack browser {
 
 
 
+
+
+/* ctrl tab is back */
+#ctrlTab-previews {
+  border-radius: 2em !important;
+  margin-bottom: 2em !important;
+  padding: 1.5em !important;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+  background-color: light-dark(#fff8, #0005) !important;
+}
+
+.ctrlTab-canvas img {
+  border-radius: 1em !important;
+  transition: all 0.5s ease-in-out !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    scale: 1.05 !important;
+  }
+}
+
+#ctrlTab-preview:active,
+#ctrlTab-preview:focus {
+  .ctrlTab-canvas img {
+    scale: 1.05 !important;
+  }
+}
+
 /* ctrl tab visuals and animations */
-/*#ctrlTab-panel {
-  --panel-background: var(--lwt-accent-color) !important;
-  transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.2s !important;
-  scale: 0.7;
-  border-radius: 1em !important;
+#ctrlTab-panel {
+  background-color: transparent !important;
+  --panel-background: transparent !important;
+  --zen-appcontent-border: none !important;
+  border: none !important;
 }
 
-#ctrlTab-panel:has(.ctrlTab-preview:not([hidden="true"])) {
-  scale: 1 !important;
+body:has(
+    #ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true"])
+  )
+  #tabbrowser-tabpanels {
+  filter: blur(10px) !important;
 }
 
-slot:nth-child(1) {
-  border-radius: 1em !important;
-/*   padding: 0 !important; */
+/* transparent glance */
+.zen-glance-background > vbox {
+  mask-image: linear-gradient(
+    to right,
+    black 0%,
+    black 4%,
+    transparent 7%,
+    transparent 93.5%,
+    black 96%,
+    black 100%
+  );
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
 }
 
-.ctrlTab-preview-inner {
-  margin: 0 !important;
-  transition: all 0.2s ease-in-out;
-
-  .ctrlTab-canvas {
-    border-radius: 1em !important;
-    overflow: hidden;
-
-    img {
-      background-color: #000000 !important;
-    }
-  }
-
-  .ctrlTab-favicon-container {
-    justify-content: center !important;
-    transition: all 0.5s ease-in-out;
-
-    image {
-      border-radius: 50% !important;
-      transition: all 0.5s ease-in-out !important;
-      /* 			scale: 1.25 !important; */
-    }
-  }
-
-  .ctrlTab-label {
-    margin-top: 1.5em !important;
-  }
+.zen-glance-overlay > vbox {
+  background-color: light-dark(#fff7, #0007) !important;
+  margin-top: 0.5% !important;
+  margin-bottom: 0.5% !important;
+  height: 98% !important;
 }
 
-.ctrlTab-preview:focus > .ctrlTab-preview-inner {
-  outline: none !important;
-  /* border: none !important;   */
-  background-color: var(--sidebar-background-color) !important;
-  border-radius: 1.5em !important;
-  scale: 1.03 !important;
-
-  .ctrlTab-favicon-container {
-    image {
-      padding: 2px !important;
-    }
-  }
-}
-*/
 
 
 

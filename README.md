@@ -39,3 +39,11 @@ also i think this is just clean af
 set zen.widget.macos.window-material to 1 in about config to get this kind of transparency
 
 you can also change the primary color in natsumi-config.css, natsumi-library.css, and natsumi-pip.css to whatever you want. i use #4F93FF
+
+Bottom essentials
+<img width="311" alt="Screenshot 2025-05-14 at 10 22 01" src="https://github.com/user-attachments/
+assets/9250d534-397f-457b-84b3-ac0c0f34374e" />
+
+
+pinned extensions
+<img width="296" alt="Screenshot 2025-05-14 at 10 22 27" src="https://github.com/user-attachments/assets/e0afee5f-2bbd-406d-9120-b48e68eeda57" />

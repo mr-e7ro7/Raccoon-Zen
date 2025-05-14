@@ -3,6 +3,7 @@ a compilation of the zen css i have perminantly borrowed.
 these are not css that i made. just ones i found and use.
 the current css comes form greeeen-dev(natsumi browser), TheBigWazz(pineapple fried), sameerasw(my-internet), tanay-kar(lacuna), aaaaannd idk who all gave me the rest, but they have my deepest gratitude
 
+I stole animations from zen zero, rgb tavs from nebula 
 
 
 mini zen logo (turns 3 dot menue button into zen logo)+ removing back and forward buttons
@@ -23,8 +24,7 @@ dancing audio tab icon(its animated)
 
 
 
-and cool animations.
-
+bottom essentials
 
 <img width="311" alt="Screenshot 2025-05-14 at 10 22 01" src="https://github.com/user-attachments/assets/9250d534-397f-457b-84b3-ac0c0f34374e" />
 

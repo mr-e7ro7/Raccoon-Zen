@@ -26,22 +26,6 @@ dancing audio tab icon(its animated)
 and cool animations.
 
 
-to get the old natsumi urlbar animation(assuming natsumi is already installed), go to natsumi>modules>natsumi-urlbar.css and replace the part under the title */*animations*/* (NOT the whole css) with the old animation css
-
-
-also i think this is just clean af
-
-<img width="1440" alt="Screenshot 2025-03-11 at 19 44 37" src="https://github.com/user-attachments/assets/a5538646-4580-440e-b25f-954aca0faa2b" />
-
-<img width="1306" alt="Screenshot 2025-03-11 at 19 47 56" src="https://github.com/user-attachments/assets/92ec7392-9683-44ba-bd4f-65e8baad16d1" />
-
-
-set zen.widget.macos.window-material to 1 in about config to get this kind of transparency
-
-you can also change the primary color in natsumi-config.css, natsumi-library.css, and natsumi-pip.css to whatever you want. i use #4F93FF
-
-Bottom essentials
-
 <img width="311" alt="Screenshot 2025-05-14 at 10 22 01" src="https://github.com/user-attachments/assets/9250d534-397f-457b-84b3-ac0c0f34374e" />
 
 

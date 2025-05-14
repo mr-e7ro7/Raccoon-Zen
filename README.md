@@ -3,7 +3,7 @@ a compilation of the zen css i have perminantly borrowed.
 these are not css that i made. just ones i found and use.
 the current css comes form greeeen-dev(natsumi browser), TheBigWazz(pineapple fried), sameerasw(my-internet), tanay-kar(lacuna), aaaaannd idk who all gave me the rest, but they have my deepest gratitude
 
-I stole animations from zen zero, rgb tavs from nebula 
+I stole animations from zen zero, rgb tabs from nebula 
 
 
 mini zen logo (turns 3 dot menue button into zen logo)+ removing back and forward buttons

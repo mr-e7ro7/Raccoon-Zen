@@ -1,0 +1,290 @@
+
+/* -----audio tab----- */
+
+/* ---------- Show media tab button when tab hover ---------- */
+.tab-icon-overlay {
+  &:not([crashed]) {
+    &:is([soundplaying], [muted], [activemedia-blocked]) {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transition: opacity 0.3s ease-out, visibility 0s linear 0.3s !important;
+    }
+  }
+}
+
+.tab-stack:hover {
+  .tab-icon-overlay {
+    &:not([crashed]) {
+      &:is([soundplaying], [muted], [activemedia-blocked]) {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: opacity 0.3s ease-out !important;
+      }
+    }
+  }
+}
+/* -------------------- */
+
+
+/* ---------- Dancing tab icon ---------- */
+@keyframes swing {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+.tabbrowser-tab[soundplaying] .tab-icon-image {
+  animation: swing 1.2s ease-in-out infinite alternate;
+  transform-origin: 50% 90%;
+}
+/* -------------------- */
+
+
+/* ---------- Note indicator audio tab ---------- */
+@keyframes soundFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateX(-10px) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.8) translateX(0) translateY(0);
+  }
+}
+
+@keyframes soundFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1.8) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5) translateY(-10px);
+  }
+}
+
+.tabbrowser-tab[soundplaying]:not([muted]) .tab-icon-stack::after {
+  animation: soundFadeIn 1s ease-in forwards;
+}
+
+.tabbrowser-tab[soundplaying][muted] .tab-icon-stack::after,
+.tabbrowser-tab[soundplaying][soundplaying-scheduledremoval] .tab-icon-stack::after {
+  animation: soundFadeOut 1s ease-out forwards;
+}
+
+.tabbrowser-tab[soundplaying] .tab-icon-stack::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.tabbrowser-tab[soundplaying] .tab-icon-stack::after {
+  top: -20px;
+  left: 10px;
+}
+
+#zen-essentials-container .tabbrowser-tab[soundplaying] .tab-icon-stack::after {
+  top: -20px;
+  left: 0px;
+}
+
+
+.tabbrowser-tab[soundplaying] .tab-icon-stack::after {
+  background: url('note-indicator.svg') no-repeat;
+}
+/* -------------------- */
+
+
+
+
+
+
+
+/* Animations */
+/* Tab switch animation */
+#tabbrowser-tabpanels
+  > hbox:not([zen-split="true"]):not(:has(.zen-glance-background)) {
+  @media -moz-pref( "mod.sameerasw.zen_tab_switch_anim") {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35),
+      filter 0.45s ease-in-out, opacity 0.35s ease-in-out !important;
+    scale: 0.9 !important;
+    opacity: 0;
+  }
+}
+#tabbrowser-tabpanels > hbox.deck-selected:not([zen-split="true"]) {
+  @media -moz-pref( "mod.sameerasw.zen_tab_switch_anim") {
+    scale: 1 !important;
+    opacity: 1 !important;
+  }
+}
+
+/* website switch animations */
+#browser:not(:has(.zen-glance-background)) #tabbrowser-tabpanels {
+  @media -moz-pref( "mod.sameerasw.zen_urlbar_zoom_anim") {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important;
+  }
+}
+
+/* URL bar zoom animation */
+#browser:has(#urlbar[open][zen-floating-urlbar="true"]) #tabbrowser-tabpanels {
+  @media -moz-pref( "mod.sameerasw.zen_urlbar_zoom_anim") {
+    pointer-events: none;
+    scale: 1.1 !important;
+    filter: blur(10px) brightness(70%) !important;
+  }
+}
+
+#urlbar[open][zen-floating-urlbar="true"] #urlbar-background {
+  @media -moz-pref( "mod.sameerasw.zen_urlbar_zoom_anim") {
+    border-radius: 1em !important;
+  }
+}
+
+/* trackpad gestures*/
+tabpanels .browserStack browser {
+  @media -moz-pref( "mod.sameerasw.zen_trackpad_anim") {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.1) 0.1s !important;
+    border-radius: 0.75em !important;
+  }
+}
+
+/* Previous animation*/
+.browserStack:has(
+    #historySwipeAnimationPreviousArrow:not([style="translate: none;"])
+  )
+  browser {
+  @media -moz-pref( "mod.sameerasw.zen_trackpad_anim") {
+    scale: 0.95 !important;
+    transform: translateX(3%) !important;
+    border-radius: 2em !important;
+  }
+}
+
+/* Next animation*/
+.browserStack:has(
+    #historySwipeAnimationNextArrow:not([style="translate: none;"])
+  )
+  browser {
+  @media -moz-pref( "mod.sameerasw.zen_trackpad_anim") {
+    scale: 0.95 !important;
+    transform: translateX(-3%) !important;
+    border-radius: 2em !important;
+  }
+}
+
+
+
+
+
+
+/* ctrl tab is back */
+#ctrlTab-previews {
+  border-radius: 2em !important;
+  margin-bottom: 2em !important;
+  padding: 1.5em !important;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px !important;
+  background-color: light-dark(#fff8, #0005) !important;
+}
+
+.ctrlTab-canvas img {
+  border-radius: 1em !important;
+  transition: all 0.5s ease-in-out !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    scale: 1.05 !important;
+  }
+}
+
+#ctrlTab-preview:active,
+#ctrlTab-preview:focus {
+  .ctrlTab-canvas img {
+    scale: 1.05 !important;
+  }
+}
+
+/* ctrl tab visuals and animations */
+#ctrlTab-panel {
+  background-color: transparent !important;
+  --panel-background: transparent !important;
+  --zen-appcontent-border: none !important;
+  border: none !important;
+}
+
+body:has(
+    #ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true"])
+  )
+  #tabbrowser-tabpanels {
+  filter: blur(10px) !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* --- glance open animation fix --- */
+.browserSidebarContainer.zen-glance-background.deck-selected {
+  filter: blur(5px) brightness(50%);
+  transition: filter 0.1s ease-in-out;
+}
+/* --------------- loading blur & scale ----------------- */
+/* Default behavior (Style 1) - Applied when no preference is set or when nebula-tab-loading-animation 1 */
+@media (-moz-pref("zen.view.use-single-toolbar")) {
+  .browserSidebarContainer {
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important, 
+                filter 0.18s cubic-bezier(0.2, 0.8, 0.4, 1) !important;
+  }
+  
+  #main-window:has(.tabbrowser-tab[selected][busy]) .browserSidebarContainer {
+    filter: blur(15px) !important;
+    transform: scale(0.975) !important;
+    transition-delay: 0.5s !important;
+  }
+}
+
+/* Style 2 - Override default when nebula-tab-loading-animation is set to 2 */
+@media (-moz-pref("zen.view.use-single-toolbar")) and (-moz-pref("nebula-tab-loading-animation", 2)) {
+  .browserSidebarContainer {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.35) !important, 
+                filter 0.3s cubic-bezier(0.2, 0.8, 0.4, 1) !important;
+  }
+  
+  #main-window:has(.tabbrowser-tab[selected][busy]) .browserSidebarContainer {
+    filter: blur(20px) !important;
+    transform: scale(0.95) !important;
+    transition-delay: 0.5s !important;
+  }
+}
+
+/* Style 0 - Disable animations when nebula-tab-loading-animation is set to 0 */
+@media (-moz-pref("zen.view.use-single-toolbar")) and (-moz-pref("nebula-tab-loading-animation", 0)) {
+  .browserSidebarContainer {
+    transition: none !important;
+  }
+  
+  #main-window:has(.tabbrowser-tab[selected][busy]) .browserSidebarContainer,
+  #main-window:has(.tabbrowser-tab[selected]:not([busy])) .browserSidebarContainer {
+    filter: none !important;
+    transform: none !important;
+    transition-delay: 0s !important;
+  }
+}

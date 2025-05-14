@@ -1,0 +1,10 @@
+
+/* ytm-hide elements */
+/*#side-panel,*/
+#nav-bar-divider,
+#background,
+div.av.style-scope.ytmusic-player-page,
+ytmusic-chip-cloud-renderer.style-scope.ytmusic-section-list-renderer,
+tp-yt-paper-toast.toast-button.style-scope.yt-notification-action-renderer.paper-toast-open {
+  display: none !important;
+}

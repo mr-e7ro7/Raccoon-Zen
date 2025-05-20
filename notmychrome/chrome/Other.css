@@ -144,7 +144,7 @@ browser {
 
 
 /* bottom essentials */
-
+/*
 #zen-essentials-wrapper {
   position: absolute;
   bottom: 0;
@@ -161,7 +161,7 @@ browser {
 #zen-tabs-wrapper {
   margin-top: 0 !important;
   margin-bottom: 9em !important; 
-}
+}*/
 /* put your own magic number you can look over the margin-top that was set by the inline style */
 
 
@@ -170,9 +170,9 @@ browser {
 
 
 
-/*
+
 #zen-current-workspace-indicator-container {
   display: none !important
 }
-*/
+
 

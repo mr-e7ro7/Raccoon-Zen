@@ -26,6 +26,7 @@ cool animations from "Zen Zero" + animated toolbar buttons and rgb tabs from "ne
 
 <img width="292" alt="Screenshot 2025-05-20 at 12 18 56" src="https://github.com/user-attachments/assets/9ef345e0-e7bf-4701-83d7-9d40c095669b" />
 
+
 <img width="58" alt="Screenshot 2025-03-04 at 21 39 13" src="https://github.com/user-attachments/assets/04210677-a36d-4232-87cf-1b2c031dc7f3" />
 
 

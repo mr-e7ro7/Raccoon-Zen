@@ -4,7 +4,10 @@ these are not css that i made. just ones i found and use.
 the current css comes form greeeen-dev(natsumi browser), TheBigWazz(pineapple fried), sameerasw(Zen Zero), tanay-kar(lacuna), JustAdumbPrsn(nebula) aaaaannd idk who all gave me the rest, but they have my deepest gratitude
 
 
-there is no workspace indicator(can be found at the bottom of other.css and turned into a comment)
+no workspace indicator(can be found at the bottom of other.css and turned into a comment)
+
+<img width="296" alt="Screenshot 2025-05-20 at 14 22 59" src="https://github.com/user-attachments/assets/8ef2bd57-7dfa-4eab-9cf5-e9d10ab4c8b0" />
+
 
 mini zen logo (turns 3 dot menue button into zen logo)
 

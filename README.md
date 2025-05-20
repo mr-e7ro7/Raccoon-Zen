@@ -34,7 +34,7 @@ cool animations from "Zen Zero" + animated toolbar buttons and rgb tabs from "ne
 
 
 
-bottom essentials + better workspace buttons
+bottom essentials(can be found at the bottom of other.css) + better workspace buttons
 
 <img width="316" alt="Screenshot 2025-05-20 at 12 16 05" src="https://github.com/user-attachments/assets/7690033f-c5fc-4377-a400-fbe645136849" />
 

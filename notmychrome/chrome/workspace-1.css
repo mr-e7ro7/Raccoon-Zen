@@ -1,0 +1,140 @@
+/* ZEN WORKSPACE BORDERS */
+
+#zen-workspaces-button {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3) !important;
+    border-radius: 8px !important;
+    border: 1px solid #ffffff0c !important;
+}
+
+  
+  #zen-workspaces-button {
+    .subviewbutton {
+        &[active="true"] {
+            background: rgba(255, 255, 255, 0.1) !important;
+            transition: 0.3s !important;
+            border: 1px solid #ffffff0a !important;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.062) !important;
+  
+        }
+  
+        &:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+            transition: 0.3s !important;
+        }
+  
+        &:after {
+            display: none !important;
+        }
+  
+    }
+  }
+  
+  #zen-current-workspace-indicator {
+      padding: 10px calc(4px + var(--tab-inline-padding)) !important;
+      font-weight: 500 !important; 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* workspace border */
+
+.subviewbutton[tooltiptext]:not([active="true"]):hover .zen-workspace-icon {
+  visibility: visible !important;
+ 
+  transform: scale(0.9);
+  opacity: 1 !important;
+}
+
+.subviewbutton[tooltiptext]:not([active="true"]):hover
+  .zen-workspace-icon::after {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+
+/*--------------------------workspace gap----------------------*/
+#zen-workspaces-button {
+  container-name: workspaces;
+  container-type: inline-size;
+  display: block;
+  width: 95px !important;
+  gap: 10px !important;
+  max-height: min-content;
+  background: transparent !important;
+  margin-top: 1px !important;
+  margin-left: 4px !important;
+}
+
+@container workspaces (width < 100px) {
+  .subviewbutton[tooltiptext]:not([active="true"]):not(:hover) {
+    width: 8px !important;
+    padding: 0px;
+  }
+
+  .subviewbutton[tooltiptext]:not([active="true"]):not(:hover)
+    .zen-workspace-icon {
+    visibility: hidden;
+    position: relative;
+    padding: 0;
+    width: 5px !important;
+    height: 5px !important;
+    padding: 0px;
+  }
+
+  .subviewbutton[tooltiptext]:not([active="true"]) .zen-workspace-icon::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: block;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: visible !important;
+    z-index: 1;
+    padding: 0;
+  }
+}
+
+/* Make the parent container a flexbox to handle resizing */
+#zen-workspaces-button {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  
+}
+
+/* Style for the toolbar buttons */
+#zen-workspaces-button .subviewbutton {
+  flex: 1;
+ 
+  min-width: 22px;
+  max-width: 100px;
+  height: auto;
+  padding: 10px;
+  margin: 2px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* Adjust icon size relative to the button size */
+#zen-workspaces-button .subviewbutton .zen-workspace-icon {
+  transition: font-size 0.3s ease;
+}
+ 
+

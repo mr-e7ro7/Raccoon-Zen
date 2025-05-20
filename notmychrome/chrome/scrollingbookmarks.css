@@ -1,0 +1,38 @@
+/*/ BOOKMARK THEMEING /*/
+:root[zen-single-toolbar="true"] {
+#TabsToolbar-customization-target {
+    margin-top: 50px !important;                                    /* Adds gap for bookmarks below the urlbar */ 
+    padding-bottom: 40px !important;
+    scrollbar-width: none !important;
+    }
+#personal-bookmarks {
+    position: absolute !important;                                  /* Fix for jumping/flashing sidebar */
+    z-index: 9 !important;
+    top: -40px !important;                                          /* Positioning */
+    display: block ruby !important;                                 /* Display all bookmarks, breaks centering */ 
+    order: -7 !important;                                           /* Position bookmarks above */
+    contain: inline-size !important;                                /* Set Width */
+    align-self: safe center;                                        /* Centers bookmark bar area */
+    overflow: scroll;                                               /* Allow scrolling */
+    scrollbar-width: none;                                          /* Hides scrollbar */
+    background: !important;
+    margin-bottom: 2px; 
+    }
+#personal-bookmarks:hover {
+    background: !important;                                         /* Default hover */
+    }
+#PlacesToolbar, #PlacesToolbarItems {
+    overflow-x: visible;                                            /* Show overflow */
+    scrollbar-width: none;                                          /* Hides scrollbar */
+    justify-content: safe center;                                   /* Centers icons */
+    
+    }
+#personal-bookmarks .bookmark-item > .toolbarbutton-text {
+    display: none !important;                                       /* Hide bookmark text */
+    }
+#personal-bookmarks .bookmark-item:hover > .toolbarbutton-text {
+    
+
+
+
+

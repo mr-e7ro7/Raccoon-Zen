@@ -1,0 +1,186 @@
+/* Credit: Pinned extensions mod from discord */
+
+/* === PINNED EXTENSIONS (Keeps Dark Background & Shadow) ==================================================================================== */
+/* Pinned extensions */
+#TabsToolbar-customization-target {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  gap: calc(var(--zen-toolbox-padding) - 3px) !important;
+ 
+  #tabbrowser-tabs {
+    min-width: 100% !important;
+    height: calc(100% - 41px) !important;
+  }
+  
+  #Zen-tabs-wrapper {
+    max-height: 700px !important;
+  }
+  
+  .unified-extensions-item-action-button {
+    padding: 0px !important;
+  }
+  
+  /* Pinned Extensions */
+  .unified-extensions-item {
+    margin-inline: 2px !important;
+    border-bottom: 0px !important;
+    padding: 0px !important;
+    height: 32px !important;
+    width: 32px !important;
+    flex-grow: 1 !important;
+    order: -1 !important;
+    background-color: light-dark(rgba(255,255,255,0.354), rgba(0,0,0,0.354)) !important;
+    box-shadow: 0 0px 3px light-dark(rgba(255, 255, 255, 0.2),rgba(0, 0, 0, 0.2)) !important;
+    border-radius: calc(var(--nebula-border-radius) - 0.5px) !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+  }
+
+  .unified-extensions-item:hover {
+    background-color: light-dark(rgba(255,255,255,0.5), rgba(0,0,0,0.5)) !important;
+    box-shadow: 0 0px 3px light-dark(rgba(255, 255, 255, 0.95),rgba(0, 0, 0, 0.95)) !important;
+  }
+
+  toolbarbutton:not([id="tabs-newtab-button"]) {
+    height: 32px !important;
+    width: 32px !important;
+    flex-grow: 1 !important;
+    padding: 0px !important;
+
+    toolbarbutton,
+    stack {
+      --toolbarbutton-active-background: transparent !important;
+      --toolbarbutton-hover-background: transparent !important;
+    }
+
+    .toolbarbutton-badge {
+      display: none !important;
+    }
+
+    .toolbarbutton-text {
+      display: none !important;
+    }
+  }
+
+  >toolbarbutton:not([id="tabs-newtab-button"]),
+  >toolbaritem {
+    background-color: light-dark(rgba(255,255,255,0.4), rgba(0,0,0,0.4)) !important;
+    box-shadow: 0 0px 3px light-dark(rgba(255, 255, 255, 0.12),rgba(0, 0, 0, 0.12)) !important;
+    border-radius: calc(var(--nebula-border-radius) + 1px) !important;
+    margin: 0px !important;
+    order: -1 !important;
+    flex-grow: 1 !important;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
+  }
+
+  >toolbarbutton:not([id="tabs-newtab-button"]):hover,
+  >toolbaritem:hover {
+    background-color: light-dark(rgba(255,255,255,0.45), rgba(0,0,0,0.5)) !important;
+    box-shadow: 0 0px 3px light-dark(rgba(255, 255, 255, 0.95),rgba(0, 0, 0, 0.95)) !important; 
+  }
+}
+/* -------- Hover animation gradient -------- */
+.unified-extensions-item {
+  position: relative !important;
+  border-radius: calc(var(--nebula-border-radius) - 1px) !important;
+}
+
+.unified-extensions-item::before {
+  content: "";
+  position: absolute;
+  inset: -0.1px;
+  background: linear-gradient(
+    45deg,
+    color-mix(in srgb, var(--zen-primary-color) 5%, black),  
+    color-mix(in srgb, var(--zen-primary-color) 30%, black),  
+    color-mix(in srgb, var(--zen-primary-color) 75%, black),  
+    color-mix(in srgb, var(--zen-primary-color) 100%, black),  
+    color-mix(in srgb, var(--zen-primary-color) 50%, black),  
+    color-mix(in srgb, var(--zen-primary-color) 15%, black)
+  );
+  background-size: 200% 400%;
+  border-radius: calc(var(--nebula-border-radius) - 2px) !important;
+  clip-path: inset(0 round calc(var(--nebula-border-radius) - 2px));
+  animation: ext-hover-gradient 6s linear infinite;
+  animation-play-state: paused;
+  opacity: 0;
+  filter: blur(20px) brightness(0.58);
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glow on hover */
+.unified-extensions-item:hover::before {
+  animation-play-state: running;
+  opacity: 0.5;
+}
+
+/* Hide glow when hovering close/reset */
+.unified-extensions-item:has(.close-button:hover, .reset-button:hover)::before {
+  opacity: 0;
+}
+
+/* Style 0 - No gradient */
+@media (-moz-pref("nebula-glow-gradient", 0)) {
+  .unified-extensions-item::before {
+    display: none;
+  }
+}
+
+/* Style 2 - Monochrome gradient */
+@media (-moz-pref("nebula-glow-gradient", 2)) {
+  .unified-extensions-item::before {
+    display: block;
+    background: linear-gradient(
+      45deg,  
+      light-dark(#dddddd, #ffffff),  
+      light-dark(#eeeeee, #dddddd),  
+      light-dark(#dddddd, #bbbbbb),  
+      light-dark(#ffffff, #000000),  
+      light-dark(#eeeeee, #dddddd),  
+      light-dark(#dddddd, #ffffff)
+    );
+    background-size: 200% 400%;
+    filter: blur(20px) brightness(0.88);
+  }
+}
+
+/* Style 3 - RGB gradient */
+@media (-moz-pref("nebula-glow-gradient", 3)) {
+  .unified-extensions-item::before {
+    display: block;
+    background: linear-gradient(
+      45deg, 
+      #ff8a00, #e52e71, #7f00ff, #00c9ff, #ff8a00
+    );
+    background-size: 200% 400%;
+    filter: blur(20px) brightness(0.88);
+  }
+}
+
+/* Gradient animation keyframes */
+@keyframes ext-hover-gradient {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 0%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* ─── Pinned Extensions: stronger rounding ───────────────────────────────────────── */
+
+/* Main icon containers */
+#TabsToolbar-customization-target .unified-extensions-item,
+#TabsToolbar-customization-target > toolbarbutton:not([id="tabs-newtab-button"]),
+#TabsToolbar-customization-target > toolbaritem {
+  /* bump this up to taste—8px is a nice gentle curve */
+  border-radius: 12px !important;
+}
+
+/* Make sure the hover-glow background matches */
+.unified-extensions-item::before {
+  border-radius: 12px !important;
+  clip-path: inset(0 round 8px) !important;
+}

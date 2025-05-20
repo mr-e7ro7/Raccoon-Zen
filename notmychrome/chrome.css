@@ -1,0 +1,11 @@
+/*-----UserChrome.css-----*/
+
+
+@import "chrome/tabgroups-sameerasw.css";
+@import "chrome/animations.css";
+@import "chrome/RGB.css";
+@import "chrome/pinned-extensions.css";
+@import "chrome/Topbar-buttons.css";
+@import "chrome/workspace-1.css";
+/*@import "chrome/Nebula-config.css";*/
+@import "chrome/Other.css";

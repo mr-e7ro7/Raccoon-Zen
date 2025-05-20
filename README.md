@@ -16,6 +16,9 @@ mini zen logo (turns 3 dot menue button into zen logo)
 
 shy toolbar + better customize toolbar from Tanay-Kar modified to accomodate shy toolbar
 
+<img width="70" alt="Screenshot 2025-05-20 at 12 22 29" src="https://github.com/user-attachments/assets/bb624c5d-3452-4eaf-882f-b8eb78786650" />
+
+
 <img width="1019" alt="Screenshot 2025-05-20 at 12 12 13" src="https://github.com/user-attachments/assets/e834159e-41f9-47e9-9f7a-2e9c4cfdfe3d" />
 
 

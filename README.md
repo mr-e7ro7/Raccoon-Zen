@@ -7,8 +7,9 @@ I stole animations from zen zero, rgb tabs from nebula
 
 
 mini zen logo (turns 3 dot menue button into zen logo)
-<img width="197" alt="Screenshot 2025-05-20 at 11 52 11" src="https://github.com/user-attachments/assets/0a53fef4-67a2-4b19-bb01-7cd7dcdc36cb" />
 
+
+<img width="197" alt="Screenshot 2025-05-20 at 11 52 11" src="https://github.com/user-attachments/assets/0a53fef4-67a2-4b19-bb01-7cd7dcdc36cb" />
 
 
 

@@ -380,7 +380,7 @@
 /* ------------------------- Tabs Styling -------------------------- */
 .tabbrowser-tab[pinned]:not([zen-essentials="true"]) {
     .tab-background {
-      background-color: light-dark(rgba(225,225,225,0.2), rgba(225,225,225,0.1)) !important;
+      background-color: light-dark(rgba(225,225,225,0.2), rgba(0,0,0,0.7)) !important;
       box-shadow: 0 0px 8px rgba(0, 0, 0, 0) !important;
       border-radius: 12px !important;
       position: relative !important;

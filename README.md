@@ -3,8 +3,8 @@ a compilation of the zen css i have perminantly borrowed.
 these are not css that i made. just ones i found and use.
 the current css comes form greeeen-dev(natsumi browser), TheBigWazz(pineapple fried), sameerasw(Zen Zero), tanay-kar(lacuna), JustAdumbPrsn(nebula) aaaaannd idk who all gave me the rest, but they have my deepest gratitude
 
-I stole animations from zen zero, rgb tabs from nebula 
 
+there is no workspace indicator
 
 mini zen logo (turns 3 dot menue button into zen logo)
 

@@ -171,8 +171,7 @@ browser {
 
 
 
-#zen-current-workspace-indicator-container {
-  display: none !important
+.zen-current-workspace-indicator {
+    display: none !important;
 }
-
 

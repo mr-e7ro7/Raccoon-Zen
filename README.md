@@ -6,9 +6,10 @@ the current css comes form greeeen-dev(natsumi browser), TheBigWazz(pineapple fr
 I stole animations from zen zero, rgb tabs from nebula 
 
 
-mini zen logo (turns 3 dot menue button into zen logo)+ removing back and forward buttons
+mini zen logo (turns 3 dot menue button into zen logo)
+<img width="197" alt="Screenshot 2025-05-20 at 11 52 11" src="https://github.com/user-attachments/assets/0a53fef4-67a2-4b19-bb01-7cd7dcdc36cb" />
 
-<img width="310" alt="Screenshot 2025-03-04 at 21 38 33" src="https://github.com/user-attachments/assets/0ac82815-d203-43b8-999f-310890b641ae" />
+
 
 
 

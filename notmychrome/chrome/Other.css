@@ -175,3 +175,14 @@ browser {
     display: none !important;
 }
 
+
+
+
+
+/*----- Essentisl width -----*/
+/*
+:root {--essentials-width: 100px;}
+#zen-essentials-container, .zen-essentials-container {
+    grid-template-columns: repeat(auto-fit, minmax(var(--essentials-width), auto)) !important;
+}
+*/
